@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+
+# Local medical data and derived artifacts must not be committed.
+/Data/
+**/medical_dataset/
+**/data/*.pkl
+**/saved_model/
+**/checkpoints/
+**/extracted_feature/
+**/runs/
+**/*feature*.csv
+**/*embedding*.csv
+**/*.dcm
+**/*.nii
+**/*.nii.gz
+**/*.pkl
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.xlsx
+**/*.xls
+
+# Local tooling metadata and backups.
+.spyproject/
+*.bak

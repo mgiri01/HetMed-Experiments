@@ -1,0 +1,25 @@
+# Recommended Python: 3.8
+#
+# Keep torch/torchvision unpinned here so the cluster install can choose
+# CUDA builds compatible with V100 GPUs.
+
+numpy<1.24
+pandas
+scipy
+scikit-learn
+networkx
+matplotlib
+tqdm
+PyYAML
+openpyxl
+Pillow
+opencv-python
+pydicom
+SimpleITK
+torch
+torchvision
+transformers
+huggingface-hub
+accelerate
+sentencepiece
+sglang
