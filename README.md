@@ -4,7 +4,7 @@ This is an independent experimental implementation inspired by the HetMed and
 DMGI papers. It is not affiliated with or endorsed by their authors and does
 not contain source code from their unlicensed reference implementations.
 
-The repository provides a PyTorch- and PyTorch Geometric-based implementation
+The repository provides a PyTorch-based and PyTorch Geometric-based implementation
 of experiments inspired by the Deep Multiplex Graph Infomax strategy described
 in “Heterogeneous Graph Learning for Multi-modal Medical Data Analysis” (Kim
 et al., 2023). The experiments focus on the
