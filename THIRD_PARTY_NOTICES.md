@@ -8,10 +8,7 @@ the projects, datasets, publications, or model weights listed below.
 
 ### PyTorch Geometric
 
-Parts of the multiplex-network model design, including the relation-wise graph
-convolution and DMGI training formulation, are based on or substantially
-adapted from the PyTorch Geometric DMGI example at https://github.com/pyg-team/pytorch_geometric/blob/master/examples/hetero/dmgi_unsup.py and use
-`torch_geometric.nn.GCNConv`.
+Parts of the multiplex-network implementation, including the relation-specific graph convolutions, corruption procedure, summary computation, discriminator loss, and consensus regularization, are based on or substantially adapted from PyTorch Geometric’s DMGI example. The implementation also uses torch_geometric.nn.GCNConv.
 
 - Project: <https://github.com/pyg-team/pytorch_geometric>
 - License: MIT
