@@ -1,11 +1,26 @@
+import argparse
+
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
 
-import pandas as pd
 
-path = r"C:\Users\y0qz1\Desktop\HetMed\Multimodal-Medical\Non-Image_Features\Clinical_and_Other_Features_Domain_Selected_v3.xlsx"
-clin_non_image_features = pd.read_excel(path)
+parser = argparse.ArgumentParser(
+    description="Explore clinical features and write a validation sample."
+)
+parser.add_argument(
+    "--input",
+    required=True,
+    help="Path to the clinical-feature Excel workbook.",
+)
+parser.add_argument(
+    "--output",
+    required=True,
+    help="Path for the sampled validation CSV.",
+)
+args = parser.parse_args()
+
+clin_non_image_features = pd.read_excel(args.input)
 
 list(clin_non_image_features)
 
@@ -248,5 +263,4 @@ sample_100 = clin_non_image_features.sample(
 )
 
 
-val_path = r"C:\Users\y0qz1\Desktop\HetMed\Multimodal-Medical\Non-Image_Features\Clinical_and_Other_Features_Domain_Selected_val.csv"
-sample_100.to_csv(val_path)
+sample_100.to_csv(args.output, index=False)

@@ -1,3 +1,4 @@
+import argparse
 import os
 import sys
 import importlib
@@ -129,14 +130,16 @@ def extract_3_slice_stack(patient_list, root_dir, anno_path, output_dir):
         except Exception as e:
             print(f"  [ERROR] {patient_id}: {e}")
 
-# --- Paths ---
-PT_LIST = "C:/Users/y0qz1/Desktop/dataset_patients_list_all.xlsx"
-ROOT = "D:/Duke-Breast-Cancer-MRI" 
-ANNO_FILE = "C:/Users/y0qz1/Desktop/Annotation_Boxes.xlsx"
-OUT = "C:/Users/y0qz1/Desktop/Extracted_Slices_Raw_NoN4"
-
-# --- Execution ---
 if __name__ == "__main__":
-    pts = pd.read_excel(PT_LIST)
+    parser = argparse.ArgumentParser(
+        description="Extract normalized Duke MRI slices without N4 correction."
+    )
+    parser.add_argument("--patient-list", required=True, help="Patient-list Excel workbook.")
+    parser.add_argument("--root", required=True, help="Root directory containing Duke DICOM files.")
+    parser.add_argument("--annotations", required=True, help="Annotation Excel workbook.")
+    parser.add_argument("--output", required=True, help="Output directory for extracted slices.")
+    args = parser.parse_args()
+
+    pts = pd.read_excel(args.patient_list)
     patients = list(pts["PatientID"])
-    extract_3_slice_stack(patients, ROOT, ANNO_FILE, OUT)
+    extract_3_slice_stack(patients, args.root, args.annotations, args.output)

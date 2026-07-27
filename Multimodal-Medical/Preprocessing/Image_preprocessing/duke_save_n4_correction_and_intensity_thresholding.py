@@ -1,3 +1,4 @@
+import argparse
 import os
 import pandas as pd
 import pydicom
@@ -127,17 +128,20 @@ def extract_3_slice_stack(patient_list, root_dir, anno_path, output_dir):
         except Exception as e:
             print(f"  [ERROR] {patient_id}: {e}")
             
-PT_LIST = "C:/Users/y0qz1/Desktop/Extracted_Slices_20260329_errors_processed/PatientErrorsList2.xlsx"
-ROOT ="C:/Users/y0qz1/Desktop/Extracted_Slices_20260329_errors/manifest-1777085455826"
-MAP_FILE = "C:/Users/y0qz1/Desktop/Breast-Cancer-MRI-filepath_filename-mapping.xlsx"
-ANNO_FILE = "C:/Users/y0qz1/Desktop/Annotation_Boxes.xlsx"
-OUT = "C:/Users/y0qz1/Desktop/Extracted_Slices_20260329_errors_processed"
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Extract N4-corrected and intensity-normalized Duke MRI slices."
+    )
+    parser.add_argument("--patient-list", required=True, help="Patient-list Excel workbook.")
+    parser.add_argument(
+        "--root",
+        required=True,
+        help="Directory containing the Duke-Breast-Cancer-MRI folder.",
+    )
+    parser.add_argument("--annotations", required=True, help="Annotation Excel workbook.")
+    parser.add_argument("--output", required=True, help="Output directory for extracted slices.")
+    args = parser.parse_args()
 
-
-pts = pd.read_excel(PT_LIST)
-
-patients = list(pts['PatientID'])
-
-
-
-extract_3_slice_stack(patients, ROOT, ANNO_FILE, OUT)
+    pts = pd.read_excel(args.patient_list)
+    patients = list(pts["PatientID"])
+    extract_3_slice_stack(patients, args.root, args.annotations, args.output)
