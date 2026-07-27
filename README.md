@@ -37,7 +37,7 @@ This project explores the following choices:
    calculation reported by Hadidchi et al. in
    [“A deep learning framework to stratify Nottingham histologic grade 2
    breast tumors based on dynamic contrast-enhanced
-   MRI”](https://doi.org/10.1007/s00330-025-12208-6) (Hadidchi et al. European Radiology (2026).
+   MRI”](https://doi.org/10.1007/s00330-025-12208-6) (European Radiology, 2026).
    The repository expects this derived value in the `Nottingham_Grade_v2` input column; patients with grade that remains
    unavailable are excluded.
 
