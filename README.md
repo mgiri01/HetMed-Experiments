@@ -71,6 +71,3 @@ See:
   for authorized data acquisition and local preprocessing.
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for provenance, licenses,
   research citations, and external-resource terms.
-
-The top-level [`LICENSE`](LICENSE) applies only to original code and
-documentation owned by this repository's contributors.

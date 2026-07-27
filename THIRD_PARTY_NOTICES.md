@@ -1,9 +1,5 @@
 # Third-party notices
 
-The repository's top-level MIT license applies only to original material
-created by HetMed_Experiments contributors. It does not change the licenses of
-the projects, datasets, publications, or model weights listed below.
-
 ## Incorporated or substantially adapted material
 
 ### PyTorch Geometric
