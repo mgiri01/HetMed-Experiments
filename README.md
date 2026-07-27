@@ -37,19 +37,18 @@ This project explores the following choices:
    calculation reported by Hadidchi et al. in
    [“A deep learning framework to stratify Nottingham histologic grade 2
    breast tumors based on dynamic contrast-enhanced
-   MRI”](https://doi.org/10.1007/s00330-025-12208-6) (available in
-   2025; European Radiology, 2026). The repository expects this derived value
-   in the `Nottingham_Grade_v2` input column; patients with grade that remains
+   MRI”](https://doi.org/10.1007/s00330-025-12208-6) (Hadidchi et al. European Radiology (2026).
+   The repository expects this derived value in the `Nottingham_Grade_v2` input column; patients with grade that remains
    unavailable are excluded.
 
-4. **Preassigned non-image feature views.** The graph-construction code does
+5. **Preassigned non-image feature views.** The graph-construction code does
    not run a clustering algorithm to select non-image features. Instead,
    features are assigned to predefined groups, and each group defines a
    patient-similarity graph view using thresholded cosine similarity. These
    manually specified experimental feature groups should not be interpreted
    as validated clinical groupings.
 
-5. **Grade-aware data splits.** Training, validation, and test indices are
+6. **Grade-aware data splits.** Training, validation, and test indices are
    allocated by grade. By default, the split allocation follows the overall
    grade proportions. When the optional balanced-training mode is enabled,
    the training distribution may be adjusted while the validation and test
