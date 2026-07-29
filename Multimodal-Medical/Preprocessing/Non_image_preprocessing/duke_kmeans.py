@@ -25,10 +25,7 @@ LABEL_COLUMN = "Nottingham_Grade_v2"
 MAX_HOLDOUT_DISTRIBUTION_DRIFT = 0.09
 
 
- 
 
-
-#Cluster-Based
 FEATURE_GROUPS = [
     [
         "Menopause_at_Dx",
@@ -62,43 +59,6 @@ FEATURE_GROUPS = [
     ],
     ["Staging_N"],
 ]
-
-
-#Domain-Knowledge-Based
-# FEATURE_GROUPS = [
-#     [
-#         "Staging_N",
-#         "HER2",
-#         "ER",
-#         "PR",
-#         "Staging_Mx",
-#     ],
-#     [
-#         "Menopause_at_Dx",
-#         "Mets_at_Presentation",
-#         "Adjuvant_Endocrine_Therapy_Medications",
-#         "Adjuvant_Chemotherapy",
-#         "Known_Ovarian_Status",
-#         "Recurrence"
-#     ],
-#     [
-#         "Surgery",
-#         "Definitive_Surgery_Type",
-#         "Neoadjuvant_RT",
-#         "Adjuvant_RT",
-#         "Neoadjuvant_Anti_Her2_Neu_Therapy",
-#         "Adjuvant_Anti_Her2_Neu_Therapy",
-#         "Oophorectomy_as_Endocrine_Therapy",
-#         "Neoadjuvant_Endocrine_Therapy_Med"  
-#     ],
-#     [    
-#         "Multicentric_Multifocal",
-#         "Lympadenopathy_Susp_Nodes",
-#         "Contralateral_Involvement",
-#         "Pec_Chest_Involvement",
-#         "Skin_Nipple_Involvement",
-#         ],
-# ]
 
 # FEATURE_GROUPS = [
 #     # Group 1: Receptor Subtype & Patient Baseline Biology
