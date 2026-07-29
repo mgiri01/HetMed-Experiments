@@ -22,4 +22,4 @@ transformers
 huggingface-hub
 accelerate
 sentencepiece
-sglang
+
