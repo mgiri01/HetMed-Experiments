@@ -79,7 +79,7 @@ by this repository. Each dependency remains governed by its own license:
 - PyTorch Geometric: MIT
 - Transformers, Hugging Face Hub, and Accelerate: Apache-2.0
 - SentencePiece: Apache-2.0
-- SGLang: Apache-2.0
+
 
 Package metadata and the corresponding upstream project should be checked
 when creating a frozen environment because dependency licenses and versions
