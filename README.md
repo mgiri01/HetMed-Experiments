@@ -1,4 +1,4 @@
-# HetMed_Experiments
+# HetMed-Experiments
 
 This is an independent experimental implementation inspired by the HetMed and
 DMGI papers. It is not affiliated with or endorsed by their authors and does
